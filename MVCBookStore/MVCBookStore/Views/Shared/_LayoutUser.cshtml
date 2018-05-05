@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Book Store Template, Free CSS Template, CSS Website Layout</title>
+    <meta name="keywords" content="Book Store Template, Free CSS Template, CSS Website Layout, CSS, HTML" />
+    <meta name="description" content="Book Store Template, Free CSS Template, Download CSS Website" />
+   
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <!--  Free CSS Templates from www.templatemo.com -->
+    <div id="templatemo_container">
+        <div id="templatemo_menu">
+            <ul>
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar">
+                            </span>
+                        </button>
+                        @Html.ActionLink("Trang chủ", "Index", "BookStore", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Quản lý chủ đề", "SPTheoChude", "BookStore")</li>
+                            <li>@Html.ActionLink("Quản lý NXB", "SPTheoNXB", "BookStore")</li>
+                            <li>@Html.ActionLink("Quản lý sách", "Index", "BookStore")</li>
+                            <li>@Html.ActionLink("Giỏ hàng", "GioHang", "Giohang")</li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </div> <!-- end of menu -->
+
+        <div id="templatemo_header">
+            <div id="templatemo_special_offers">
+                <p>
+                    <span></span> 
+                </p>
+                <a href="subpage.html" style="margin-left: 50px;"></a>
+            </div>
+
+
+            <div id="templatemo_new_books">
+                <ul>
+                    
+                </ul>
+                <a href="subpage.html" style="margin-left: 50px;"></a>
+            </div>
+        </div> <!-- end of header -->
+
+        <div id="templatemo_content">
+
+            <div id="templatemo_content_left">
+                <div class="templatemo_content_left_section">
+                    @Html.Action("Chude", "Bookstore")
+                </div>
+                <div class="templatemo_content_left_section">
+                    @Html.Action("Nhaxuatban", "Bookstore")
+                </div>
+
+
+
+            </div> <!-- end of content left -->
+            <h1>Nguyễn Đức Long-15DH110358</h1>
+
+            <div id="templatemo_content_right">
+                <div>
+                    @RenderBody()
+                </div>
+            </div> <!-- end of content right -->
+
+            <div class="cleaner_with_height">&nbsp;</div>
+        </div>
+</body>
+</html>
